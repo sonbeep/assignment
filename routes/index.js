@@ -74,9 +74,9 @@ router.post('/create', async function(req, res){
   res.redirect('/')
 })
 router.get('/getUser', function (req, res){
-  const thuVienList = mongoose.model('anh', THUVIEN);
+ 
 
-   thuVienList.find({},function (error, result){
+   THUVIEN.find({},function (error, result){
     res.send(result);
   })
 })
