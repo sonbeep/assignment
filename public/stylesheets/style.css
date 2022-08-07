@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  align-content: center;
+}
+
+a {
+  color: #00B7FF;
+}
+.hinhanh{
+ width: 200px;
+  height: 400px;
+  align-content: center;
+
+
+}
+.de{
+    font-size: 30px;
+    font-family: Arial;
+}
+.cot{
+   float: left;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<form action="/update" method="post" enctype="application/x-www-form-urlencoded">
+    <hr>
+    <div>ID : <%= data._id %></div>
+    <div align="center">Link:<img class="hinhanh" src="<%= data.linkanh %>"> </div>
+    <div>Tieu de : <%= data.tieude %></div>
+    <div>Ghichu : <%= data.ghichu %></div>
+    <hr>
+
+
+    <input name="id" value="<%= data._id %>" hidden>
+    <div >Anh : <input name="linkanh" value=" <%= data.linkanh %>"></div>
+    <div>Tieu de : <input name="tieude" value="<%= data.tieude %>"></div>
+    <div>Ghichu : <input name="ghichu" value=" <%= data.ghichu %>"></div>
+
+    <button type="submit">Update</button>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .cot{
+        width: 320px;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 30px;
+      }
+    </style>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <form  action="/create" method="post" enctype="application/x-www-form-urlencoded">
+
+    <div >linkanh : <input name="linkanh" value=" <%= data.linkanh %>"></div>
+    <div>Tieu de : <input name="tieude" value="<%= data.tieude %>"></div>
+    <div>Ghi chu : <input name="ghichu" value=" <%= data.ghichu %>"></div>
+
+    <button type="submit">Update</button>
+
+  </form>
+
+
+  <% for (var i =0; i<data.length; i++){%>
+  <div class="cot">
+
+    <div align="center"><img class="hinhanh" src="<%= data[i].linkanh %>"></div>
+      <div align="center" ><h1 class="de"> <%= data[i].tieude %></h1></div>
+      <div align="center"><p> <%= data[i].ghichu %></p></div>
+        <div align="center">
+      <a  href="/delete/?id=<%= data[i]._id %>">Delete</a>
+      <a href="/updateForm/?id=<%= data[i]._id %>">Update</a></div>
+  </div>
+<%}%>
+  </body>
+</html>
