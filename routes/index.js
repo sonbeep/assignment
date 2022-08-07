@@ -74,7 +74,7 @@ router.post('/create', async function(req, res){
   res.redirect('/')
 })
 router.get('/getUser', function (req, res){
- 
+
 
    THUVIEN.find({},function (error, result){
     res.send(result);
